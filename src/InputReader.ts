@@ -20,7 +20,7 @@ export class InputReader {
    * Constructs InputReader.
    * @param writer - The output writer.
    */
-  public constructor(private writer: OutputWriter) {
+  public constructor(private writer?: OutputWriter) {
     this.validator = new InputValidator(writer);
   }
 
@@ -37,7 +37,7 @@ export class InputReader {
     if (frequency.length > 0) {
       f = Number(frequency);
     }
-    this.writer.writeInfo(`Adding daughter: ${p} -> ${d} (${f})`, 1);
+    this.writer?.writeInfo(`Adding daughter: ${p} -> ${d} (${f})`, 1);
     this.nuclides[p].daughters[d] = f;
     this.validator.validateDaughters(p, this.nuclides[p].daughters);
   }
@@ -69,7 +69,7 @@ export class InputReader {
       );
     }
     if (!this.nuclides[nname]) {
-      this.writer.writeInfo(`Adding new nuclide: ${nname}`, 1);
+      this.writer?.writeInfo(`Adding new nuclide: ${nname}`, 1);
       this.nuclides[nname] = nuclide;
       this.validator.validateGammas(nuclide);
     } else {
@@ -113,7 +113,7 @@ export class InputReader {
         t12 = Number(t);
         break;
       default:
-        this.writer.writeError(`Error reading half-life: ${half_life}`);
+        this.writer?.writeError(`Error reading half-life: ${half_life}`);
     }
     return t12;
   }
@@ -179,7 +179,7 @@ export class InputReader {
    * @param path - The path to the file to read.
    */
   public async readInventoryCSV(path: string) {
-    this.writer.writeInfo(`Reading inventory from ${path}`, 0);
+    this.writer?.writeInfo(`Reading inventory from ${path}`, 0);
     const records: string[][] = [];
     const parser = createReadStream(path).pipe(parse());
     parser.on('readable', () => {
@@ -194,14 +194,14 @@ export class InputReader {
         const inv = new Inventory(records[i][0]);
         inv.setNumberFromBq(
           Number(records[i][1]),
-          this.nuclides[records[i][0]].half_life,
+          this.nuclides[records[i][0]].lambda,
         );
         this.inventory.push(inv);
       } else {
-        this.writer.writeError(`Nuclide not found in data: ${records[i][0]}`);
+        this.writer?.writeError(`Nuclide not found in data: ${records[i][0]}`);
       }
     }
-    this.writer.writeInventory(this.inventory);
+    this.writer?.writeInventory(this.inventory);
     return this.inventory;
   }
 
@@ -210,7 +210,7 @@ export class InputReader {
    * @param path - The path to the file to read.
    */
   public async readNuclideCSV(path: string) {
-    this.writer.writeInfo(`Reading nuclides from ${path}`, 0);
+    this.writer?.writeInfo(`Reading nuclides from ${path}`, 0);
     const records: string[][] = [];
     const parser = createReadStream(path).pipe(parse());
     parser.on('readable', () => {
@@ -241,7 +241,7 @@ export class InputReader {
         this.processRecord(records[i], start, records[parentLine][start - 6]);
       }
     }
-    this.writer.writeNuclides(this.nuclides);
+    this.writer?.writeNuclides(this.nuclides);
     return this.nuclides;
   }
 }

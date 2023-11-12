@@ -4,21 +4,24 @@
     "half_life": 339244240,
     "gammas": { "0.514": 0.0043 },
     "stable": false,
-    "daughters": { "Rb-85": 1 }
+    "daughters": { "Rb-85": 1 },
+    "_lambda": 2.0432098730989367e-9
   },
   "Rb-85": {
     "name": "Rb-85",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Kr-85m": {
     "name": "Kr-85m",
     "half_life": 16128.000000000002,
     "gammas": { "0.1512": 0.75 },
     "stable": false,
-    "daughters": { "Kr-85": 0.214 }
+    "daughters": { "Kr-85": 0.214 },
+    "_lambda": 0.00004297787577876644
   },
   "Kr-87": {
     "name": "Kr-87",
@@ -32,35 +35,40 @@
       "1.7405": 0.0204
     },
     "stable": false,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0.00015140829632152584
   },
   "Kr-88": {
     "name": "Kr-88",
     "half_life": 10224,
     "gammas": { "2.3921": 0.346 },
     "stable": false,
-    "daughters": { "Rb-88": 1 }
+    "daughters": { "Rb-88": 1 },
+    "_lambda": 0.0000677960857355189
   },
   "Rb-88": {
     "name": "Rb-88",
     "half_life": 1066.8000000000002,
     "gammas": { "1.836": 0.214 },
     "stable": false,
-    "daughters": { "Sr-88": 1 }
+    "daughters": { "Sr-88": 1 },
+    "_lambda": 0.0006497442637419809
   },
   "Sr-88": {
     "name": "Sr-88",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Kr-89": {
     "name": "Kr-89",
     "half_life": 189,
     "gammas": {},
     "stable": false,
-    "daughters": { "Rb-89": 1 }
+    "daughters": { "Rb-89": 1 },
+    "_lambda": 0.0036674453997880704
   },
   "Rb-89": {
     "name": "Rb-89",
@@ -78,84 +86,96 @@
       "0.6578": 0.108
     },
     "stable": false,
-    "daughters": { "Sr-89": 1 }
+    "daughters": { "Sr-89": 1 },
+    "_lambda": 0.0007625381524311829
   },
   "Sr-89": {
     "name": "Sr-89",
     "half_life": 4365792,
     "gammas": { "0.909": 0.0001 },
     "stable": false,
-    "daughters": { "Y-89": 1 }
+    "daughters": { "Y-89": 1 },
+    "_lambda": 1.5876779758631315e-7
   },
   "Y-89": {
     "name": "Y-89",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Kr-91": {
     "name": "Kr-91",
     "half_life": 8.57,
     "gammas": {},
     "stable": false,
-    "daughters": { "Rb-91": 1 }
+    "daughters": { "Rb-91": 1 },
+    "_lambda": 0.08088065117385593
   },
   "Rb-91": {
     "name": "Rb-91",
     "half_life": 58.2,
     "gammas": {},
     "stable": false,
-    "daughters": { "Sr-91": 1 }
+    "daughters": { "Sr-91": 1 },
+    "_lambda": 0.011909745370445795
   },
   "Sr-91": {
     "name": "Sr-91",
     "half_life": 34668,
     "gammas": { "1.0243": 0.335 },
     "stable": false,
-    "daughters": { "Y-91m": 0.582, "Y-91": 0.418 }
+    "daughters": { "Y-91m": 0.582, "Y-91": 0.418 },
+    "_lambda": 0.00001999386121379789
   },
   "Y-91m": {
     "name": "Y-91m",
     "half_life": 2982.6,
     "gammas": { "0.5556": 0.95 },
     "stable": false,
-    "daughters": { "Y-91": 1 }
+    "daughters": { "Y-91": 1 },
+    "_lambda": 0.00023239696256955185
   },
   "Y-91": {
     "name": "Y-91",
     "half_life": 5055264,
     "gammas": { "1.2048": 0.0026 },
     "stable": false,
-    "daughters": { "Zr-91": 1 }
+    "daughters": { "Zr-91": 1 },
+    "_lambda": 1.3711394312145624e-7
   },
   "Zr-91": {
     "name": "Zr-91",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Kr-92": {
     "name": "Kr-92",
     "half_life": 1.84,
     "gammas": {},
     "stable": false,
-    "daughters": { "Rb-92": 1 }
+    "daughters": { "Rb-92": 1 },
+    "_lambda": 0.37671042421736156
   },
   "Rb-92": {
     "name": "Rb-92",
     "half_life": 4.492,
     "gammas": {},
     "stable": false,
-    "daughters": { "Sr-92": 1 }
+    "daughters": { "Sr-92": 1 },
+    "_lambda": 0.1543070304007002
   },
   "Sr-92": {
     "name": "Sr-92",
     "half_life": 9576,
     "gammas": { "1.3839": 0.9 },
     "stable": false,
-    "daughters": { "Y-92": 1 }
+    "daughters": { "Y-92": 1 },
+    "_lambda": 0.00007238379078529086
   },
   "Y-92": {
     "name": "Y-92",
@@ -168,98 +188,112 @@
       "0.4485": 0.023
     },
     "stable": false,
-    "daughters": { "Zr-92": 1 }
+    "daughters": { "Zr-92": 1 },
+    "_lambda": 0.00005439008008160274
   },
   "Zr-92": {
     "name": "Zr-92",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Kr-93": {
     "name": "Kr-93",
     "half_life": 1.286,
     "gammas": {},
     "stable": false,
-    "daughters": { "Rb-93": 1 }
+    "daughters": { "Rb-93": 1 },
+    "_lambda": 0.5389946971694753
   },
   "Rb-93": {
     "name": "Rb-93",
     "half_life": 5.84,
     "gammas": {},
     "stable": false,
-    "daughters": { "Sr-93": 1 }
+    "daughters": { "Sr-93": 1 },
+    "_lambda": 0.1186895857123194
   },
   "Sr-93": {
     "name": "Sr-93",
     "half_life": 445.38,
     "gammas": {},
     "stable": false,
-    "daughters": { "Y-93": 1 }
+    "daughters": { "Y-93": 1 },
+    "_lambda": 0.001556305133952906
   },
   "Y-93": {
     "name": "Y-93",
     "half_life": 36648,
     "gammas": { "1.9178": 0.0154, "0.9471": 0.021, "0.2669": 0.073 },
     "stable": false,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0.00001891364277886775
   },
   "Xe-133": {
     "name": "Xe-133",
     "half_life": 452995.2,
     "gammas": { "0.081": 0.38 },
     "stable": false,
-    "daughters": { "Cs-133": 1 }
+    "daughters": { "Cs-133": 1 },
+    "_lambda": 0.0000015301424398314711
   },
   "Cs-133": {
     "name": "Cs-133",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Xe-135": {
     "name": "Xe-135",
     "half_life": 32904,
     "gammas": { "0.2498": 0.9, "0.6082": 0.029 },
     "stable": false,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0.000021065742176025568
   },
   "Xe-135m": {
     "name": "Xe-135m",
     "half_life": 917.4,
     "gammas": { "0.5266": 0.8 },
     "stable": false,
-    "daughters": { "Xe-135": 0.994 }
+    "daughters": { "Xe-135": 0.994 },
+    "_lambda": 0.0007555561157182748
   },
   "Xe-137": {
     "name": "Xe-137",
     "half_life": 229.08,
     "gammas": {},
     "stable": false,
-    "daughters": { "Cs-137": 1 }
+    "daughters": { "Cs-137": 1 },
+    "_lambda": 0.0030257865398984865
   },
   "Cs-137": {
     "name": "Cs-137",
     "half_life": 951470334,
     "gammas": {},
     "stable": false,
-    "daughters": { "Ba-137m": 0.944 }
+    "daughters": { "Ba-137m": 0.944 },
+    "_lambda": 7.285010954003589e-10
   },
   "Ba-137m": {
     "name": "Ba-137m",
     "half_life": 153.12,
     "gammas": { "0.6617": 0.9011 },
     "stable": false,
-    "daughters": { "Ba-137": 1 }
+    "daughters": { "Ba-137": 1 },
+    "_lambda": 0.004526823279518974
   },
   "Ba-137": {
     "name": "Ba-137",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Xe-138": {
     "name": "Xe-138",
@@ -276,7 +310,8 @@
       "1.1143": 0.0147
     },
     "stable": false,
-    "daughters": { "Cs-138": 1 }
+    "daughters": { "Cs-138": 1 },
+    "_lambda": 0.0008204867194128141
   },
   "Cs-138": {
     "name": "Cs-138",
@@ -293,63 +328,72 @@
       "0.4628": 0.307
     },
     "stable": false,
-    "daughters": { "Ba-138": 1 }
+    "daughters": { "Ba-138": 1 },
+    "_lambda": 0.00034577830018953673
   },
   "Ba-138": {
     "name": "Ba-138",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Xe-139": {
     "name": "Xe-139",
     "half_life": 39.68,
     "gammas": {},
     "stable": false,
-    "daughters": { "Cs-139": 1 }
+    "daughters": { "Cs-139": 1 },
+    "_lambda": 0.017468426929434105
   },
   "Cs-139": {
     "name": "Cs-139",
     "half_life": 556,
     "gammas": {},
     "stable": false,
-    "daughters": { "Ba-139": 1 }
+    "daughters": { "Ba-139": 1 },
+    "_lambda": 0.0012466675909351534
   },
   "Ba-139": {
     "name": "Ba-139",
     "half_life": 4983.6,
     "gammas": { "0.1659": 0.24 },
     "stable": false,
-    "daughters": { "La-139": 1 }
+    "daughters": { "La-139": 1 },
+    "_lambda": 0.0001390856370013535
   },
   "La-139": {
     "name": "La-139",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Xe-140": {
     "name": "Xe-140",
     "half_life": 13.6,
     "gammas": {},
     "stable": false,
-    "daughters": { "Cs-140": 1 }
+    "daughters": { "Cs-140": 1 },
+    "_lambda": 0.050966704452937155
   },
   "Cs-140": {
     "name": "Cs-140",
     "half_life": 63.7,
     "gammas": {},
     "stable": false,
-    "daughters": { "Ba-140": 1 }
+    "daughters": { "Ba-140": 1 },
+    "_lambda": 0.010881431405964604
   },
   "Ba-140": {
     "name": "Ba-140",
     "half_life": 1101772.8,
     "gammas": { "0.5373": 0.2439 },
     "stable": false,
-    "daughters": { "La-140": 1 }
+    "daughters": { "La-140": 1 },
+    "_lambda": 6.291198880204206e-7
   },
   "La-140": {
     "name": "La-140",
@@ -362,28 +406,32 @@
       "0.3288": 0.203
     },
     "stable": false,
-    "daughters": { "Ce-140": 1 }
+    "daughters": { "Ce-140": 1 },
+    "_lambda": 0.000004780726304771113
   },
   "Ce-140": {
     "name": "Ce-140",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Xe-141": {
     "name": "Xe-141",
     "half_life": 1.73,
     "gammas": {},
     "stable": false,
-    "daughters": { "Cs-141": 1 }
+    "daughters": { "Cs-141": 1 },
+    "_lambda": 0.4006631101502574
   },
   "Cs-141": {
     "name": "Cs-141",
     "half_life": 24.84,
     "gammas": {},
     "stable": false,
-    "daughters": { "Ba-141": 1 }
+    "daughters": { "Ba-141": 1 },
+    "_lambda": 0.027904475867952708
   },
   "Ba-141": {
     "name": "Ba-141",
@@ -403,49 +451,56 @@
       "0.1903": 0.46
     },
     "stable": false,
-    "daughters": { "La-141": 1 }
+    "daughters": { "La-141": 1 },
+    "_lambda": 0.0006323181723772535
   },
   "La-141": {
     "name": "La-141",
     "half_life": 14112,
     "gammas": { "1.3545": 0.0164 },
     "stable": false,
-    "daughters": { "Ce-141": 1 }
+    "daughters": { "Ce-141": 1 },
+    "_lambda": 0.00004911757231859023
   },
   "Ce-141": {
     "name": "Ce-141",
     "half_life": 2808345.5999999996,
     "gammas": { "0.1454": 0.482 },
     "stable": false,
-    "daughters": { "Pr-141": 1 }
+    "daughters": { "Pr-141": 1 },
+    "_lambda": 2.468169090584668e-7
   },
   "Pr-141": {
     "name": "Pr-141",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Xe-142": {
     "name": "Xe-142",
     "half_life": 1.23,
     "gammas": {},
     "stable": false,
-    "daughters": { "Cs-142": 1 }
+    "daughters": { "Cs-142": 1 },
+    "_lambda": 0.5635342931381669
   },
   "Cs-142": {
     "name": "Cs-142",
     "half_life": 1.684,
     "gammas": {},
     "stable": false,
-    "daughters": { "Ba-142": 1 }
+    "daughters": { "Ba-142": 1 },
+    "_lambda": 0.4116075894061433
   },
   "Ba-142": {
     "name": "Ba-142",
     "half_life": 636,
     "gammas": { "1.2043": 0.142 },
     "stable": false,
-    "daughters": { "La-142": 1 }
+    "daughters": { "La-142": 1 },
+    "_lambda": 0.0010898540574841907
   },
   "La-142": {
     "name": "La-142",
@@ -473,28 +528,32 @@
       "1.2331": 0.019
     },
     "stable": false,
-    "daughters": { "Ce-142": 1 }
+    "daughters": { "Ce-142": 1 },
+    "_lambda": 0.00012681068067324283
   },
   "Ce-142": {
     "name": "Ce-142",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "I-129": {
     "name": "I-129",
     "half_life": 495178000000000,
     "gammas": { "0.0396": 0.0751 },
     "stable": false,
-    "daughters": { "Xe-129": 1 }
+    "daughters": { "Xe-129": 1 },
+    "_lambda": 1.3997939742071442e-15
   },
   "Xe-129": {
     "name": "Xe-129",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "I-131": {
     "name": "I-131",
@@ -506,21 +565,24 @@
       "0.2843": 0.0614
     },
     "stable": false,
-    "daughters": { "Xe-131m": 0.0118 }
+    "daughters": { "Xe-131m": 0.0118 },
+    "_lambda": 0.000001000229008943908
   },
   "Xe-131m": {
     "name": "Xe-131m",
     "half_life": 1022976,
     "gammas": { "0.1639": 0.0195 },
     "stable": false,
-    "daughters": { "Xe-131": 1 }
+    "daughters": { "Xe-131": 1 },
+    "_lambda": 6.775791226382097e-7
   },
   "Xe-131": {
     "name": "Xe-131",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "I-132": {
     "name": "I-132",
@@ -548,14 +610,16 @@
       "0.5227": 0.16
     },
     "stable": false,
-    "daughters": { "Xe-132": 1 }
+    "daughters": { "Xe-132": 1 },
+    "_lambda": 0.00008389580979907351
   },
   "Xe-132": {
     "name": "Xe-132",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "I-133": {
     "name": "I-133",
@@ -569,21 +633,24 @@
       "0.5299": 0.87
     },
     "stable": false,
-    "daughters": { "Xe-133": 0.971, "Xe-133m": 0.0288 }
+    "daughters": { "Xe-133": 0.971, "Xe-133m": 0.0288 },
+    "_lambda": 0.000009256773244657388
   },
   "Xe-133m": {
     "name": "Xe-133m",
     "half_life": 189216,
     "gammas": { "0.2332": 0.1 },
     "stable": false,
-    "daughters": { "Xe-133": 1 }
+    "daughters": { "Xe-133": 1 },
+    "_lambda": 0.0000036632588182814627
   },
   "I-133m": {
     "name": "I-133m",
     "half_life": 9,
     "gammas": {},
     "stable": false,
-    "daughters": { "I-133": 1 }
+    "daughters": { "I-133": 1 },
+    "_lambda": 0.07701635339554948
   },
   "I-134": {
     "name": "I-134",
@@ -595,14 +662,16 @@
       "1.8068": 0.0553
     },
     "stable": false,
-    "daughters": { "Xe-134": 1 }
+    "daughters": { "Xe-134": 1 },
+    "_lambda": 0.0002200467239872842
   },
   "Xe-134": {
     "name": "Xe-134",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "I-135": {
     "name": "I-135",
@@ -615,84 +684,96 @@
       "1.7912": 0.0772
     },
     "stable": false,
-    "daughters": { "Xe-135": 0.834, "Xe-135m": 0.166 }
+    "daughters": { "Xe-135": 0.834, "Xe-135m": 0.166 },
+    "_lambda": 0.000029306070546251702
   },
   "I-136": {
     "name": "I-136",
     "half_life": 83.39999999999999,
     "gammas": {},
     "stable": false,
-    "daughters": { "Xe-136": 1 }
+    "daughters": { "Xe-136": 1 },
+    "_lambda": 0.008311117272901023
   },
   "Xe-136": {
     "name": "Xe-136",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "I-136m": {
     "name": "I-136m",
     "half_life": 47,
     "gammas": {},
     "stable": false,
-    "daughters": { "I-136": 1 }
+    "daughters": { "I-136": 1 },
+    "_lambda": 0.014747812352339261
   },
   "I-137": {
     "name": "I-137",
     "half_life": 24.5,
     "gammas": {},
     "stable": false,
-    "daughters": { "Xe-137": 1 }
+    "daughters": { "Xe-137": 1 },
+    "_lambda": 0.02829172165550797
   },
   "I-138": {
     "name": "I-138",
     "half_life": 6.23,
     "gammas": {},
     "stable": false,
-    "daughters": { "Xe-138": 1 }
+    "daughters": { "Xe-138": 1 },
+    "_lambda": 0.11125957954413246
   },
   "I-139": {
     "name": "I-139",
     "half_life": 2.28,
     "gammas": {},
     "stable": false,
-    "daughters": { "Xe-139": 1 }
+    "daughters": { "Xe-139": 1 },
+    "_lambda": 0.30401192129822163
   },
   "I-140": {
     "name": "I-140",
     "half_life": 0.86,
     "gammas": {},
     "stable": false,
-    "daughters": { "Xe-140": 1 }
+    "daughters": { "Xe-140": 1 },
+    "_lambda": 0.805985093674355
   },
   "Cs-134": {
     "name": "Cs-134",
     "half_life": 65123792,
     "gammas": { "0.7959": 0.8553 },
     "stable": false,
-    "daughters": { "Ba-134": 1 }
+    "daughters": { "Ba-134": 1 },
+    "_lambda": 1.0643532252543668e-8
   },
   "Ba-134": {
     "name": "Ba-134",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Cs-143": {
     "name": "Cs-143",
     "half_life": 1.79,
     "gammas": {},
     "stable": false,
-    "daughters": { "Ba-143": 1 }
+    "daughters": { "Ba-143": 1 },
+    "_lambda": 0.38723306176533256
   },
   "Ba-143": {
     "name": "Ba-143",
     "half_life": 14.3,
     "gammas": {},
     "stable": false,
-    "daughters": { "La-143": 1 }
+    "daughters": { "La-143": 1 },
+    "_lambda": 0.04847183080838778
   },
   "La-143": {
     "name": "La-143",
@@ -705,84 +786,96 @@
       "1.9614": 0.0101
     },
     "stable": false,
-    "daughters": { "Ce-143": 1 }
+    "daughters": { "Ce-143": 1 },
+    "_lambda": 0.0008135530288262268
   },
   "Ce-143": {
     "name": "Ce-143",
     "half_life": 118940.40000000001,
     "gammas": { "0.2933": 0.428, "0.7219": 0.0539 },
     "stable": false,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0.000005827684962888516
   },
   "Cs-144": {
     "name": "Cs-144",
     "half_life": 0.99,
     "gammas": {},
     "stable": false,
-    "daughters": { "Ba-144": 1 }
+    "daughters": { "Ba-144": 1 },
+    "_lambda": 0.700148667232268
   },
   "Ba-144": {
     "name": "Ba-144",
     "half_life": 11.4,
     "gammas": {},
     "stable": false,
-    "daughters": { "La-144": 1 }
+    "daughters": { "La-144": 1 },
+    "_lambda": 0.06080238425964432
   },
   "La-144": {
     "name": "La-144",
     "half_life": 40.7,
     "gammas": {},
     "stable": false,
-    "daughters": { "Ce-144": 1 }
+    "daughters": { "Ce-144": 1 },
+    "_lambda": 0.017030643257001113
   },
   "Ce-144": {
     "name": "Ce-144",
     "half_life": 24616224.000000004,
     "gammas": {},
     "stable": false,
-    "daughters": { "Pr-144": 0.99, "Pr-144m": 0.00977 }
+    "daughters": { "Pr-144": 0.99, "Pr-144m": 0.00977 },
+    "_lambda": 2.8158144017536774e-8
   },
   "Pr-144": {
     "name": "Pr-144",
     "half_life": 1036.8000000000002,
     "gammas": { "0.6965": 0.0134, "2.1857": 0.0069 },
     "stable": false,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0.0006685447343363669
   },
   "Pr-144m": {
     "name": "Pr-144m",
     "half_life": 432,
     "gammas": { "0.059": 0.0008, "1.8853": 0.0001 },
     "stable": false,
-    "daughters": { "Pr-144": 0.999 }
+    "daughters": { "Pr-144": 0.999 },
+    "_lambda": 0.0016045073624072809
   },
   "Sr-94": {
     "name": "Sr-94",
     "half_life": 75.3,
     "gammas": {},
     "stable": false,
-    "daughters": { "Y-94": 1 }
+    "daughters": { "Y-94": 1 },
+    "_lambda": 0.009205141840105515
   },
   "Y-94": {
     "name": "Y-94",
     "half_life": 1122,
     "gammas": { "0.9187": 0.56 },
     "stable": false,
-    "daughters": { "Zr-94": 1 }
+    "daughters": { "Zr-94": 1 },
+    "_lambda": 0.0006177782357931777
   },
   "Zr-94": {
     "name": "Zr-94",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Sr-95": {
     "name": "Sr-95",
     "half_life": 25.1,
     "gammas": {},
     "stable": false,
-    "daughters": { "Y-95": 1 }
+    "daughters": { "Y-95": 1 },
+    "_lambda": 0.027615425520316542
   },
   "Y-95": {
     "name": "Y-95",
@@ -794,125 +887,143 @@
       "3.576": 0.064
     },
     "stable": false,
-    "daughters": { "Zr-95": 1 }
+    "daughters": { "Zr-95": 1 },
+    "_lambda": 0.001121597379546837
   },
   "Zr-95": {
     "name": "Zr-95",
     "half_life": 5531328,
     "gammas": { "0.7242": 0.4417, "0.7567": 0.5546 },
     "stable": false,
-    "daughters": { "Nb-95": 0.989, "Nb-95m": 0.0108 }
+    "daughters": { "Nb-95": 0.989, "Nb-95m": 0.0108 },
+    "_lambda": 1.2531297738263673e-7
   },
   "Nb-95": {
     "name": "Nb-95",
     "half_life": 3023222.4,
     "gammas": { "0.7658": 0.9981 },
     "stable": false,
-    "daughters": { "Mo-95": 1 }
+    "daughters": { "Mo-95": 1 },
+    "_lambda": 2.292742937337145e-7
   },
   "Mo-95": {
     "name": "Mo-95",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Nb-95m": {
     "name": "Nb-95m",
     "half_life": 311904,
     "gammas": { "0.2357": 0.249 },
     "stable": false,
-    "daughters": { "Nb-95": 0.944, "Mo-95": 0.056 }
+    "daughters": { "Nb-95": 0.944, "Mo-95": 0.056 },
+    "_lambda": 0.0000022223093662150703
   },
   "Sr-96": {
     "name": "Sr-96",
     "half_life": 1.07,
     "gammas": {},
     "stable": false,
-    "daughters": { "Y-96": 1 }
+    "daughters": { "Y-96": 1 },
+    "_lambda": 0.6478011033270517
   },
   "Y-96": {
     "name": "Y-96",
     "half_life": 5.3,
     "gammas": {},
     "stable": false,
-    "daughters": { "Zr-96": 1 }
+    "daughters": { "Zr-96": 1 },
+    "_lambda": 0.1307824868981029
   },
   "Zr-96": {
     "name": "Zr-96",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Sr-97": {
     "name": "Sr-97",
     "half_life": 0.43,
     "gammas": {},
     "stable": false,
-    "daughters": { "Y-97": 1 }
+    "daughters": { "Y-97": 1 },
+    "_lambda": 1.61197018734871
   },
   "Y-97": {
     "name": "Y-97",
     "half_life": 3.76,
     "gammas": {},
     "stable": false,
-    "daughters": { "Zr-97": 1 }
+    "daughters": { "Zr-97": 1 },
+    "_lambda": 0.18434765440424078
   },
   "Zr-97": {
     "name": "Zr-97",
     "half_life": 60278.4,
     "gammas": { "0.5076": 0.0503, "1.3624": 0.0102, "1.7502": 0.0109 },
     "stable": false,
-    "daughters": { "Nb-97": 1 }
+    "daughters": { "Nb-97": 1 },
+    "_lambda": 0.00001149909719833216
   },
   "Nb-97": {
     "name": "Nb-97",
     "half_life": 4326,
     "gammas": { "0.6579": 0.9823 },
     "stable": false,
-    "daughters": { "Mo-97": 1 }
+    "daughters": { "Mo-97": 1 },
+    "_lambda": 0.00016022819707811958
   },
   "Mo-97": {
     "name": "Mo-97",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   },
   "Sr-98": {
     "name": "Sr-98",
     "half_life": 0.65,
     "gammas": {},
     "stable": false,
-    "daughters": { "Y-98": 1 }
+    "daughters": { "Y-98": 1 },
+    "_lambda": 1.0663802777845313
   },
   "Y-98": {
     "name": "Y-98",
     "half_life": 0.59,
     "gammas": {},
     "stable": false,
-    "daughters": { "Zr-98": 1 }
+    "daughters": { "Zr-98": 1 },
+    "_lambda": 1.1748257297626192
   },
   "Zr-98": {
     "name": "Zr-98",
     "half_life": 30.7,
     "gammas": {},
     "stable": false,
-    "daughters": { "Nb-98": 1 }
+    "daughters": { "Nb-98": 1 },
+    "_lambda": 0.022578084057327207
   },
   "Nb-98": {
     "name": "Nb-98",
     "half_life": 2.9,
     "gammas": {},
     "stable": false,
-    "daughters": { "Mo-98": 1 }
+    "daughters": { "Mo-98": 1 },
+    "_lambda": 0.23901626915860183
   },
   "Mo-98": {
     "name": "Mo-98",
     "half_life": null,
     "gammas": {},
     "stable": true,
-    "daughters": {}
+    "daughters": {},
+    "_lambda": 0
   }
 }

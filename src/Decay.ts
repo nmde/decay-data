@@ -18,7 +18,7 @@ export class Decay {
   public constructor(
     private nuclides: Record<string, Nuclide>,
     private inventory: Inventory[],
-    private writer: OutputWriter,
+    private writer?: OutputWriter,
   ) {
     this.nuclideList = Object.values(nuclides);
   }
@@ -28,8 +28,8 @@ export class Decay {
    * @param time - The time to decay.
    */
   public decay(time: number) {
-    this.writer.writeInfo(`Decaying ${time} seconds`, 0);
-    this.writer.writeInfo(`Constructing delta matrix`, 2);
+    this.writer?.writeInfo(`Decaying ${time} seconds`, 0);
+    this.writer?.writeInfo(`Constructing delta matrix`, 2);
     const delta: number[][] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
       let infoLine = '';
@@ -57,9 +57,9 @@ export class Decay {
           }
         }
       }
-      this.writer.writeInfo(infoLine, 2);
+      this.writer?.writeInfo(infoLine, 2);
     }
-    this.writer.writeInfo('\nConstructing C matrix', 2);
+    this.writer?.writeInfo('\nConstructing C matrix', 2);
     const C: number[][] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
       let infoLine = '';
@@ -89,9 +89,9 @@ export class Decay {
           }
         }
       }
-      this.writer.writeInfo(infoLine, 2);
+      this.writer?.writeInfo(infoLine, 2);
     }
-    this.writer.writeInfo('\nConstructing inverse C matrix', 2);
+    this.writer?.writeInfo('\nConstructing inverse C matrix', 2);
     const invC: number[][] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
       let infoLine = '';
@@ -116,9 +116,9 @@ export class Decay {
           infoLine += `-${sum} = ${invC[i][j]},`;
         }
       }
-      this.writer.writeInfo(infoLine, 2);
+      this.writer?.writeInfo(infoLine, 2);
     }
-    this.writer.writeInfo('\nCalculating matrix exponential', 2);
+    this.writer?.writeInfo('\nCalculating matrix exponential', 2);
     const exp: number[][] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
       let infoLine = '';
@@ -139,15 +139,16 @@ export class Decay {
           infoLine += ',';
         }
       }
-      this.writer.writeInfo(infoLine, 2);
+      this.writer?.writeInfo(infoLine, 2);
     }
-    this.writer.writeInfo('\nCalculating number matrix', 2);
+    this.writer?.writeInfo('\nCalculating number matrix', 2);
     const N: number[] = [];
     let infoLine = '';
     for (let i = 0; i < this.nuclideList.length; i += 1) {
       N[i] = this.getInventory(this.nuclideList[i].name).number;
       infoLine += `${N[i]},`;
     }
+    this.writer?.writeInfo(infoLine, 2);
     const decay = math.multiply(
       math.matrix(C),
       math.multiply(
@@ -160,7 +161,9 @@ export class Decay {
     for (let i = 0; i < this.nuclideList.length; i += 1) {
       const inv = new Inventory(this.nuclideList[i].name);
       inv.number = decay[i].valueOf() as number;
-      decInv.push(inv);
+      if (inv.number !== 0) {
+        decInv.push(inv);
+      }
     }
     return decInv;
   }

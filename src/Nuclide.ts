@@ -2,6 +2,8 @@
  * Represents information about a specific nuclide.
  */
 export class Nuclide {
+  private _lambda = 0;
+
   /**
    * Constructs Nuclide.
    * @param name - The name of the nuclide.
@@ -31,6 +33,7 @@ export class Nuclide {
    * The decay constant in /s
    */
   public get lambda() {
+    this._lambda = Math.LN2 / this.half_life;
     return Math.LN2 / this.half_life;
   }
 }

@@ -4,6 +4,17 @@ A TypeScript implementation of radionuclide decay equations.
 
 Provides a library, CLI, and GUI for inputting an inventory of nuclides, and calculating their number densities and activities after decaying for a specified amount of time.
 
+## Contents
+- [decay](#decay)
+  - [Contents](#contents)
+  - [Input](#input)
+    - [Manual CSV Input](#manual-csv-input)
+    - [Automatic Input](#automatic-input)
+    - [JSON Input](#json-input)
+  - [CLI Usage](#cli-usage)
+  - [GUI Usage](#gui-usage)
+  - [Performance Comparisons](#performance-comparisons)
+
 ## Input
 The library requires two inputs: data for all nuclides in the chain, and a list of initial inventories. 
 
@@ -50,3 +61,8 @@ Additional options are:
 
 ## GUI Usage
 Todo
+
+## Performance Comparisons
+| Test       | Python | Decay.ts |
+|------------|--------|----------|
+| Kr-85 Only | 3s     | 4.28s    |
