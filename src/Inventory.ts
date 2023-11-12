@@ -4,27 +4,22 @@ import { Nuclide } from './Nuclide';
  * Represents the inventory of a nuclide.
  */
 export class Inventory {
-  private number = 0;
+  public number = 0;
 
   /**
    * Constructs Inventory.
    * @param nuclide - The corresponding nuclide.
-   * @param activity - The activity, in Bq.
    */
-  public constructor(
-    private nuclide: Nuclide,
-    activity: number,
-  ) {
-    this.setNumberFromBq(activity);
-  }
+  public constructor(public nuclide: string) {}
 
   /**
    * Sets the number density from Bq.
    * @param activity - The activity to set.
+   * @param lambda - The nuclide decay constant.
    */
-  private setNumberFromBq(activity: number) {
+  public setNumberFromBq(activity: number, lambda: number) {
     // A = lambda N
     // N = A / lambda
-    this.number = activity / this.nuclide.lambda;
+    this.number = activity / lambda;
   }
 }

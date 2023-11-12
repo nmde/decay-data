@@ -191,9 +191,12 @@ export class InputReader {
     await finished(parser);
     for (let i = 1; i < records.length; i += 1) {
       if (this.nuclides[records[i][0]]) {
-        this.inventory.push(
-          new Inventory(this.nuclides[records[i][0]], Number(records[i][1])),
+        const inv = new Inventory(records[i][0]);
+        inv.setNumberFromBq(
+          Number(records[i][1]),
+          this.nuclides[records[i][0]].half_life,
         );
+        this.inventory.push(inv);
       } else {
         this.writer.writeError(`Nuclide not found in data: ${records[i][0]}`);
       }

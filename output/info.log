@@ -1,2 +1,249 @@
 Reading nuclides from C:\Users\dmnev\Documents\nmde\decay\nuclides.csv
 Reading inventory from C:\Users\dmnev\Documents\nmde\decay\inventory.csv
+Decaying 3600 seconds
+Adding new nuclide: Kr-85
+Adding daughter: Kr-85 -> Rb-85 (1)
+Adding new nuclide: Rb-85
+Adding new nuclide: Kr-85m
+Adding daughter: Kr-85m -> Kr-85 (0.214)
+Adding daughter: Kr-85 -> Rb-85 (1)
+Adding new nuclide: Kr-87
+Adding new nuclide: Kr-88
+Adding daughter: Kr-88 -> Rb-88 (1)
+Adding new nuclide: Rb-88
+Adding daughter: Rb-88 -> Sr-88 (1)
+Adding new nuclide: Sr-88
+Adding new nuclide: Kr-89
+Adding daughter: Kr-89 -> Rb-89 (1)
+Adding new nuclide: Rb-89
+Adding daughter: Rb-89 -> Sr-89 (1)
+Adding new nuclide: Sr-89
+Adding daughter: Sr-89 -> Y-89 (1)
+Adding new nuclide: Y-89
+Adding new nuclide: Kr-91
+Adding daughter: Kr-91 -> Rb-91 (1)
+Adding new nuclide: Rb-91
+Adding daughter: Rb-91 -> Sr-91 (1)
+Adding new nuclide: Sr-91
+Adding daughter: Sr-91 -> Y-91m (0.582)
+Adding new nuclide: Y-91m
+Adding daughter: Y-91m -> Y-91 (1)
+Adding new nuclide: Y-91
+Adding daughter: Y-91 -> Zr-91 (1)
+Adding new nuclide: Zr-91
+Adding daughter: Sr-91 -> Y-91 (0.418)
+Adding daughter: Y-91 -> Zr-91 (1)
+Adding new nuclide: Kr-92
+Adding daughter: Kr-92 -> Rb-92 (1)
+Adding new nuclide: Rb-92
+Adding daughter: Rb-92 -> Sr-92 (1)
+Adding new nuclide: Sr-92
+Adding daughter: Sr-92 -> Y-92 (1)
+Adding new nuclide: Y-92
+Adding daughter: Y-92 -> Zr-92 (1)
+Adding new nuclide: Zr-92
+Adding new nuclide: Kr-93
+Adding daughter: Kr-93 -> Rb-93 (1)
+Adding new nuclide: Rb-93
+Adding daughter: Rb-93 -> Sr-93 (1)
+Adding new nuclide: Sr-93
+Adding daughter: Sr-93 -> Y-93 (1)
+Adding new nuclide: Y-93
+Adding new nuclide: Xe-133
+Adding daughter: Xe-133 -> Cs-133 (1)
+Adding new nuclide: Cs-133
+Adding new nuclide: Xe-135
+Adding new nuclide: Xe-135m
+Adding daughter: Xe-135m -> Xe-135 (0.994)
+Adding new nuclide: Xe-137
+Adding daughter: Xe-137 -> Cs-137 (1)
+Adding new nuclide: Cs-137
+Adding daughter: Cs-137 -> Ba-137m (0.944)
+Adding new nuclide: Ba-137m
+Adding daughter: Ba-137m -> Ba-137 (1)
+Adding new nuclide: Ba-137
+Adding new nuclide: Xe-138
+Adding daughter: Xe-138 -> Cs-138 (1)
+Adding new nuclide: Cs-138
+Adding daughter: Cs-138 -> Ba-138 (1)
+Adding new nuclide: Ba-138
+Adding new nuclide: Xe-139
+Adding daughter: Xe-139 -> Cs-139 (1)
+Adding new nuclide: Cs-139
+Adding daughter: Cs-139 -> Ba-139 (1)
+Adding new nuclide: Ba-139
+Adding daughter: Ba-139 -> La-139 (1)
+Adding new nuclide: La-139
+Adding new nuclide: Xe-140
+Adding daughter: Xe-140 -> Cs-140 (1)
+Adding new nuclide: Cs-140
+Adding daughter: Cs-140 -> Ba-140 (1)
+Adding new nuclide: Ba-140
+Adding daughter: Ba-140 -> La-140 (1)
+Adding new nuclide: La-140
+Adding daughter: La-140 -> Ce-140 (1)
+Adding new nuclide: Ce-140
+Adding new nuclide: Xe-141
+Adding daughter: Xe-141 -> Cs-141 (1)
+Adding new nuclide: Cs-141
+Adding daughter: Cs-141 -> Ba-141 (1)
+Adding new nuclide: Ba-141
+Adding daughter: Ba-141 -> La-141 (1)
+Adding new nuclide: La-141
+Adding daughter: La-141 -> Ce-141 (1)
+Adding new nuclide: Ce-141
+Adding daughter: Ce-141 -> Pr-141 (1)
+Adding new nuclide: Pr-141
+Adding new nuclide: Xe-142
+Adding daughter: Xe-142 -> Cs-142 (1)
+Adding new nuclide: Cs-142
+Adding daughter: Cs-142 -> Ba-142 (1)
+Adding new nuclide: Ba-142
+Adding daughter: Ba-142 -> La-142 (1)
+Adding new nuclide: La-142
+Adding daughter: La-142 -> Ce-142 (1)
+Adding new nuclide: Ce-142
+Adding new nuclide: I-129
+Adding daughter: I-129 -> Xe-129 (1)
+Adding new nuclide: Xe-129
+Adding new nuclide: I-131
+Adding daughter: I-131 -> Xe-131m (0.0118)
+Adding new nuclide: Xe-131m
+Adding daughter: Xe-131m -> Xe-131 (1)
+Adding new nuclide: Xe-131
+Adding new nuclide: I-132
+Adding daughter: I-132 -> Xe-132 (1)
+Adding new nuclide: Xe-132
+Adding new nuclide: I-133
+Adding daughter: I-133 -> Xe-133 (0.971)
+Adding daughter: Xe-133 -> Cs-133 (1)
+Adding daughter: I-133 -> Xe-133m (0.0288)
+Adding new nuclide: Xe-133m
+Adding daughter: Xe-133m -> Xe-133 (1)
+Adding daughter: Xe-133 -> Cs-133 (1)
+Adding new nuclide: I-133m
+Adding daughter: I-133m -> I-133 (1)
+Adding daughter: I-133 -> Xe-133 (0.971)
+Adding daughter: Xe-133 -> Cs-133 (1)
+Adding daughter: I-133 -> Xe-133m (0.0288)
+Adding daughter: Xe-133m -> Xe-133 (1)
+Adding daughter: Xe-133 -> Cs-133 (1)
+Adding new nuclide: I-134
+Adding daughter: I-134 -> Xe-134 (1)
+Adding new nuclide: Xe-134
+Adding new nuclide: I-135
+Adding daughter: I-135 -> Xe-135 (0.834)
+Adding daughter: I-135 -> Xe-135m (0.166)
+Adding daughter: Xe-135m -> Xe-135 (0.994)
+Adding new nuclide: I-136
+Adding daughter: I-136 -> Xe-136 (1)
+Adding new nuclide: Xe-136
+Adding new nuclide: I-136m
+Adding daughter: I-136m -> I-136 (1)
+Adding daughter: I-136 -> Xe-136 (1)
+Adding new nuclide: I-137
+Adding daughter: I-137 -> Xe-137 (1)
+Adding daughter: Xe-137 -> Cs-137 (1)
+Adding daughter: Cs-137 -> Ba-137m (0.944)
+Adding daughter: Ba-137m -> Ba-137 (1)
+Adding new nuclide: I-138
+Adding daughter: I-138 -> Xe-138 (1)
+Adding daughter: Xe-138 -> Cs-138 (1)
+Adding daughter: Cs-138 -> Ba-138 (1)
+Adding new nuclide: I-139
+Adding daughter: I-139 -> Xe-139 (1)
+Adding daughter: Xe-139 -> Cs-139 (1)
+Adding new nuclide: I-140
+Adding daughter: I-140 -> Xe-140 (1)
+Adding daughter: Xe-140 -> Cs-140 (1)
+Adding daughter: Cs-140 -> Ba-140 (1)
+Adding daughter: Ba-140 -> La-140 (1)
+Adding daughter: La-140 -> Ce-140 (1)
+Adding new nuclide: Cs-134
+Adding daughter: Cs-134 -> Ba-134 (1)
+Adding new nuclide: Ba-134
+Adding daughter: Cs-137 -> Ba-137m (0.944)
+Adding daughter: Ba-137m -> Ba-137 (1)
+Adding daughter: Cs-138 -> Ba-138 (1)
+Adding daughter: Cs-139 -> Ba-139 (1)
+Adding daughter: Ba-139 -> La-139 (1)
+Adding daughter: Cs-140 -> Ba-140 (1)
+Adding daughter: Ba-140 -> La-140 (1)
+Adding daughter: La-140 -> Ce-140 (1)
+Adding daughter: Cs-141 -> Ba-141 (1)
+Adding daughter: Ba-141 -> La-141 (1)
+Adding daughter: La-141 -> Ce-141 (1)
+Adding daughter: Ce-141 -> Pr-141 (1)
+Adding daughter: Cs-142 -> Ba-142 (1)
+Adding daughter: Ba-142 -> La-142 (1)
+Adding daughter: La-142 -> Ce-142 (1)
+Adding new nuclide: Cs-143
+Adding daughter: Cs-143 -> Ba-143 (1)
+Adding new nuclide: Ba-143
+Adding daughter: Ba-143 -> La-143 (1)
+Adding new nuclide: La-143
+Adding daughter: La-143 -> Ce-143 (1)
+Adding new nuclide: Ce-143
+Adding new nuclide: Cs-144
+Adding daughter: Cs-144 -> Ba-144 (1)
+Adding new nuclide: Ba-144
+Adding daughter: Ba-144 -> La-144 (1)
+Adding new nuclide: La-144
+Adding daughter: La-144 -> Ce-144 (1)
+Adding new nuclide: Ce-144
+Adding daughter: Ce-144 -> Pr-144 (0.99)
+Adding new nuclide: Pr-144
+Adding daughter: Ce-144 -> Pr-144m (0.00977)
+Adding new nuclide: Pr-144m
+Adding daughter: Pr-144m -> Pr-144 (0.999)
+Adding daughter: Sr-89 -> Y-89 (1)
+Adding daughter: Sr-91 -> Y-91m (0.582)
+Adding daughter: Y-91m -> Y-91 (1)
+Adding daughter: Y-91 -> Zr-91 (1)
+Adding daughter: Sr-91 -> Y-91 (0.418)
+Adding daughter: Y-91 -> Zr-91 (1)
+Adding daughter: Sr-92 -> Y-92 (1)
+Adding daughter: Y-92 -> Zr-92 (1)
+Adding daughter: Sr-93 -> Y-93 (1)
+Adding new nuclide: Sr-94
+Adding daughter: Sr-94 -> Y-94 (1)
+Adding new nuclide: Y-94
+Adding daughter: Y-94 -> Zr-94 (1)
+Adding new nuclide: Zr-94
+Adding new nuclide: Sr-95
+Adding daughter: Sr-95 -> Y-95 (1)
+Adding new nuclide: Y-95
+Adding daughter: Y-95 -> Zr-95 (1)
+Adding new nuclide: Zr-95
+Adding daughter: Zr-95 -> Nb-95 (0.989)
+Adding new nuclide: Nb-95
+Adding daughter: Nb-95 -> Mo-95 (1)
+Adding new nuclide: Mo-95
+Adding daughter: Zr-95 -> Nb-95m (0.0108)
+Adding new nuclide: Nb-95m
+Adding daughter: Nb-95m -> Nb-95 (0.944)
+Adding daughter: Nb-95 -> Mo-95 (1)
+Adding daughter: Nb-95m -> Mo-95 (0.056)
+Adding new nuclide: Sr-96
+Adding daughter: Sr-96 -> Y-96 (1)
+Adding new nuclide: Y-96
+Adding daughter: Y-96 -> Zr-96 (1)
+Adding new nuclide: Zr-96
+Adding new nuclide: Sr-97
+Adding daughter: Sr-97 -> Y-97 (1)
+Adding new nuclide: Y-97
+Adding daughter: Y-97 -> Zr-97 (1)
+Adding new nuclide: Zr-97
+Adding daughter: Zr-97 -> Nb-97 (1)
+Adding new nuclide: Nb-97
+Adding daughter: Nb-97 -> Mo-97 (1)
+Adding new nuclide: Mo-97
+Adding new nuclide: Sr-98
+Adding daughter: Sr-98 -> Y-98 (1)
+Adding new nuclide: Y-98
+Adding daughter: Y-98 -> Zr-98 (1)
+Adding new nuclide: Zr-98
+Adding daughter: Zr-98 -> Nb-98 (1)
+Adding new nuclide: Nb-98
+Adding daughter: Nb-98 -> Mo-98 (1)
+Adding new nuclide: Mo-98

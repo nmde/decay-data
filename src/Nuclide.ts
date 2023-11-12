@@ -19,6 +19,15 @@ export class Nuclide {
   ) {}
 
   /**
+   * Returns if this nuclide decays to the given nuclide.
+   * @param daughter - The daughter nuclide.
+   * @returns If this nuclide decays to the daughter nuclide.
+   */
+  public decaysTo(daughter: string) {
+    return !!this.daughters[daughter];
+  }
+
+  /**
    * The decay constant in /s
    */
   public get lambda() {
