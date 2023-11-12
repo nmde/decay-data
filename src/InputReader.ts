@@ -4,11 +4,14 @@ import { finished } from 'stream/promises';
 import { Nuclide } from './Nuclide';
 import { InputValidator } from './InputValidator';
 import { OutputWriter } from './OutputWriter';
+import { Inventory } from './Inventory';
 
 /**
  * Utilities for reading input files.
  */
 export class InputReader {
+  private inventory: Inventory[] = [];
+
   private nuclides: Record<string, Nuclide> = {};
 
   private validator: InputValidator;
@@ -175,8 +178,36 @@ export class InputReader {
    * Reads input from the given CSV file.
    * @param path - The path to the file to read.
    */
-  public async readCSV(path: string) {
-    console.log(`Reading input from ${path}`);
+  public async readInventoryCSV(path: string) {
+    this.writer.writeInfo(`Reading inventory from ${path}`, 0);
+    const records: string[][] = [];
+    const parser = createReadStream(path).pipe(parse());
+    parser.on('readable', () => {
+      let record;
+      while ((record = parser.read()) !== null) {
+        records.push(record);
+      }
+    });
+    await finished(parser);
+    for (let i = 1; i < records.length; i += 1) {
+      if (this.nuclides[records[i][0]]) {
+        this.inventory.push(
+          new Inventory(this.nuclides[records[i][0]], Number(records[i][1])),
+        );
+      } else {
+        this.writer.writeError(`Nuclide not found in data: ${records[i][0]}`);
+      }
+    }
+    this.writer.writeInventory(this.inventory);
+    return this.inventory;
+  }
+
+  /**
+   * Reads input from the given CSV file.
+   * @param path - The path to the file to read.
+   */
+  public async readNuclideCSV(path: string) {
+    this.writer.writeInfo(`Reading nuclides from ${path}`, 0);
     const records: string[][] = [];
     const parser = createReadStream(path).pipe(parse());
     parser.on('readable', () => {
@@ -208,5 +239,6 @@ export class InputReader {
       }
     }
     this.writer.writeNuclides(this.nuclides);
+    return this.nuclides;
   }
 }

@@ -17,4 +17,11 @@ export class Nuclide {
     public stable: boolean,
     public daughters: Record<string, number>,
   ) {}
+
+  /**
+   * The decay constant in /s
+   */
+  public get lambda() {
+    return Math.LN2 / this.half_life;
+  }
 }

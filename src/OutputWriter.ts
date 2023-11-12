@@ -2,6 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import * as prettier from 'prettier';
 import { Nuclide } from './Nuclide';
+import { Inventory } from './Inventory';
 
 /**
  * Utility methods for writing output files.
@@ -10,6 +11,8 @@ export class OutputWriter {
   private errors: string[] = [];
 
   private info: string[][] = [];
+
+  private inventory: Inventory[] = [];
 
   private nuclides: Record<string, Nuclide> = {};
 
@@ -30,6 +33,7 @@ export class OutputWriter {
     const errorFile = path.join(outputDir, 'error.log');
     const infoFile = path.join(outputDir, 'info.log');
     const nuclidesFile = path.join(outputDir, 'nuclides.json');
+    const inventoryFile = path.join(outputDir, 'inventory.json');
     try {
       await fs.access(outputDir);
     } catch (err) {
@@ -45,6 +49,10 @@ export class OutputWriter {
       nuclidesFile,
       await prettier.format(JSON.stringify(this.nuclides), { parser: 'json' }),
     );
+    await fs.writeFile(
+      inventoryFile,
+      await prettier.format(JSON.stringify(this.inventory), { parser: 'json' }),
+    );
     console.log(`Output written to ${outputDir}`);
   }
 
@@ -58,6 +66,14 @@ export class OutputWriter {
       this.info[level] = [];
     }
     this.info[level].push(message);
+  }
+
+  /**
+   * Writes the inventory to a JSON file.
+   * @param inventory - The inventory.
+   */
+  public writeInventory(inventory: Inventory[]) {
+    this.inventory = inventory;
   }
 
   /**
