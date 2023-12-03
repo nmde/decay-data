@@ -2,6 +2,8 @@ import * as math from 'mathjs';
 import { Inventory } from './Inventory';
 import { Nuclide } from './Nuclide';
 import { OutputWriter } from './OutputWriter';
+import { Graph } from './Graph';
+import { GraphNode } from './GraphNode';
 
 // TODO: ouput number density, activity, activity * energies
 
@@ -22,7 +24,7 @@ export class Decay {
     private inventory: Inventory[],
     private writer?: OutputWriter,
   ) {
-    this.nuclideList = Object.values(nuclides);
+    this.nuclideList = this.sortNuclides();
   }
 
   /**
@@ -31,54 +33,45 @@ export class Decay {
    */
   public decay(time: number) {
     this.writer?.writeInfo(`Decaying ${time} seconds`, 0);
-    this.writer?.writeInfo(`Constructing delta matrix`, 2);
-    const delta: number[][] = [];
-    for (let j = 0; j < this.nuclideList.length; j += 1) {
-      if (!delta[j]) {
-        delta[j] = [];
+    this.writer?.writeInfo(`Constructing Lambda matrix`, 2);
+    const lambda: number[][] = [];
+    for (let i = 0; i < this.nuclideList.length; i += 1) {
+      if (!lambda[i]) {
+        lambda[i] = [];
       }
-      delta[j][j] = -this.nuclideList[j].lambda;
-      Object.entries(this.nuclideList[j].daughters).forEach(
-        ([daughter, frac]) => {
-          const idx = this.nuclideList.findIndex((x) => x.name === daughter);
-          if (idx >= 0 && !this.nuclideList[idx].stable) {
-            delta[j][idx] = this.nuclideList[j].lambda * frac;
+      for (let j = 0; j < this.nuclideList.length; j += 1) {
+        if (i < j) {
+          lambda[i][j] = 0;
+        } else if (i === j) {
+          lambda[i][j] = -this.nuclideList[j].lambda;
+        } else {
+          if (this.nuclideList[j].decaysTo(this.nuclideList[i].name)) {
+            lambda[i][j] = this.nuclideList[j].daughters[this.nuclideList[i].name] * this.nuclideList[j].lambda;
+          } else {
+            lambda[i][j] = 0;
           }
-        },
-      );
-    }
-    for (let i = 0; i < delta.length; i += 1) {
-      for (let j = 0; j < delta.length; j += 1) {
-        if (isNaN(delta[i][j])) {
-          delta[i][j] = 0;
         }
       }
     }
-    this.writer?.writeMatrix('delta', delta);
+    this.writer?.writeMatrix('lambda', lambda);
     this.writer?.writeInfo('\nConstructing C matrix', 2);
     const C: number[][] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
-      let infoLine = '';
       if (!C[i]) {
         C[i] = [];
       }
       for (let j = 0; j < this.nuclideList.length; j += 1) {
-        const a = this.nuclideList[i];
-        const b = this.nuclideList[j];
         if (i < j) {
           C[i][j] = 0;
         } else if (i === j) {
           C[i][j] = 1;
-          infoLine += `1,`;
         } else {
-          if (b.decaysTo(a.name)) {
-            let sum = 0;
-            for (let k = j; k <= i - 1; k += 1) {
-              sum += delta[i][k] * C[k][j];
-            }
-            C[i][j] = sum / (delta[j][j] - delta[i][i]);
-            infoLine += `${sum} / (${delta[j][j]} - ${delta[i][i]}) = ${C[i][j]},`;
-          } else {
+          let sum = 0;
+          for (let k = j; k <= i - 1; k += 1) {
+            sum += lambda[i][k] * C[k][j];
+          }
+          C[i][j] = sum / (lambda[j][j] - lambda[i][i]);
+          if (isNaN(C[i][j])) {
             C[i][j] = 0;
           }
         }
@@ -92,8 +85,6 @@ export class Decay {
         invC[i] = [];
       }
       for (let j = 0; j < this.nuclideList.length; j += 1) {
-        const a = this.nuclideList[i];
-        const b = this.nuclideList[j];
         if (i < j) {
           invC[i][j] = 0;
         } else if (i === j) {
@@ -115,12 +106,10 @@ export class Decay {
         exp[i] = [];
       }
       for (let j = 0; j < this.nuclideList.length; j += 1) {
-        const a = this.nuclideList[i];
-        const b = this.nuclideList[j];
         if (i < j) {
           exp[i][j] = 0;
         } else if (i === j) {
-          exp[i][j] = Math.exp(-b.lambda * time);
+          exp[i][j] = Math.exp(-this.nuclideList[i].lambda * time);
         } else {
           exp[i][j] = 0;
         }
@@ -165,5 +154,27 @@ export class Decay {
       return i;
     }
     return new Inventory(nuclide);
+  }
+
+  /**
+   * Sorts the nuclides to ensure daughters always appear after their parents.
+   */
+  public sortNuclides() {
+    const tree: Record<string, GraphNode> = {};
+    Object.values(this.nuclides).forEach((v) => {
+      if (!tree[v.name]) {
+        tree[v.name] = new GraphNode(v.name);
+      }
+      Object.keys(v.daughters).forEach((d) => {
+        if (!tree[d]) {
+          tree[d] = new GraphNode(d);
+        }
+        tree[v.name].links.push(d);
+      });
+    });
+    const graph = new Graph();
+    graph.nodes = Object.values(tree);
+    const sorted = graph.sort();
+    return sorted.map((n) => this.nuclides[n]);
   }
 }
