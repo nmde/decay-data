@@ -3,6 +3,8 @@ import { Inventory } from './Inventory';
 import { Nuclide } from './Nuclide';
 import { OutputWriter } from './OutputWriter';
 
+// TODO: ouput number density, activity, activity * energies
+
 /**
  * Performs the decay calculations.
  */
@@ -31,34 +33,28 @@ export class Decay {
     this.writer?.writeInfo(`Decaying ${time} seconds`, 0);
     this.writer?.writeInfo(`Constructing delta matrix`, 2);
     const delta: number[][] = [];
-    for (let i = 0; i < this.nuclideList.length; i += 1) {
-      let infoLine = '';
-      if (!delta[i]) {
-        delta[i] = [];
+    for (let j = 0; j < this.nuclideList.length; j += 1) {
+      if (!delta[j]) {
+        delta[j] = [];
       }
-      for (let j = 0; j < this.nuclideList.length; j += 1) {
-        const a = this.nuclideList[i];
-        const b = this.nuclideList[j];
-        if (i < j) {
-          delta[i][j] = 0;
-          infoLine += ',';
-        } else if (i === j) {
-          delta[i][j] = -b.lambda;
-          infoLine += `-${b.lambda},`;
-        } else {
-          if (b.decaysTo(a.name)) {
-            delta[i][j] = b.daughters[a.name] * b.lambda;
-            infoLine += `${b.daughters[a.name]} * ${b.lambda} = ${
-              delta[i][j]
-            },`;
-          } else {
-            delta[i][j] = 0;
-            infoLine += ',';
+      delta[j][j] = -this.nuclideList[j].lambda;
+      Object.entries(this.nuclideList[j].daughters).forEach(
+        ([daughter, frac]) => {
+          const idx = this.nuclideList.findIndex((x) => x.name === daughter);
+          if (idx >= 0 && !this.nuclideList[idx].stable) {
+            delta[j][idx] = this.nuclideList[j].lambda * frac;
           }
+        },
+      );
+    }
+    for (let i = 0; i < delta.length; i += 1) {
+      for (let j = 0; j < delta.length; j += 1) {
+        if (isNaN(delta[i][j])) {
+          delta[i][j] = 0;
         }
       }
-      this.writer?.writeInfo(infoLine, 2);
     }
+    this.writer?.writeMatrix('delta', delta);
     this.writer?.writeInfo('\nConstructing C matrix', 2);
     const C: number[][] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
@@ -71,7 +67,6 @@ export class Decay {
         const b = this.nuclideList[j];
         if (i < j) {
           C[i][j] = 0;
-          infoLine += ',';
         } else if (i === j) {
           C[i][j] = 1;
           infoLine += `1,`;
@@ -85,16 +80,14 @@ export class Decay {
             infoLine += `${sum} / (${delta[j][j]} - ${delta[i][i]}) = ${C[i][j]},`;
           } else {
             C[i][j] = 0;
-            infoLine += ',';
           }
         }
       }
-      this.writer?.writeInfo(infoLine, 2);
     }
+    this.writer?.writeMatrix('C', C);
     this.writer?.writeInfo('\nConstructing inverse C matrix', 2);
     const invC: number[][] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
-      let infoLine = '';
       if (!invC[i]) {
         invC[i] = [];
       }
@@ -103,25 +96,21 @@ export class Decay {
         const b = this.nuclideList[j];
         if (i < j) {
           invC[i][j] = 0;
-          infoLine += ',';
         } else if (i === j) {
           invC[i][j] = 1;
-          infoLine += `1,`;
         } else {
           let sum = 0;
           for (let k = j; k <= i - 1; k += 1) {
-            sum += C[i][k] * invC[k][j];
+            sum -= C[i][k] * invC[k][j];
           }
-          invC[i][j] = -sum;
-          infoLine += `-${sum} = ${invC[i][j]},`;
+          invC[i][j] = sum;
         }
       }
-      this.writer?.writeInfo(infoLine, 2);
     }
+    this.writer?.writeMatrix('invC', invC);
     this.writer?.writeInfo('\nCalculating matrix exponential', 2);
     const exp: number[][] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
-      let infoLine = '';
       if (!exp[i]) {
         exp[i] = [];
       }
@@ -130,37 +119,34 @@ export class Decay {
         const b = this.nuclideList[j];
         if (i < j) {
           exp[i][j] = 0;
-          infoLine += ',';
         } else if (i === j) {
           exp[i][j] = Math.exp(-b.lambda * time);
-          infoLine += `exp(-${b.lambda} * ${time}) = ${exp[i][j]},`;
         } else {
           exp[i][j] = 0;
-          infoLine += ',';
         }
       }
-      this.writer?.writeInfo(infoLine, 2);
     }
+    this.writer?.writeMatrix('exp', exp);
     this.writer?.writeInfo('\nCalculating number matrix', 2);
-    const N: number[] = [];
-    let infoLine = '';
+    const N: number[][] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
-      N[i] = this.getInventory(this.nuclideList[i].name).number;
-      infoLine += `${N[i]},`;
+      N[i] = [this.getInventory(this.nuclideList[i].name).number];
     }
-    this.writer?.writeInfo(infoLine, 2);
-    const decay = math.multiply(
-      math.matrix(C),
-      math.multiply(
-        math.matrix(exp),
-        math.multiply(math.matrix(invC), math.matrix(N)),
-      ),
-    ).toArray();
+    this.writer?.writeMatrix('N', N);
+    const decay = math
+      .multiply(
+        math.matrix(C),
+        math.multiply(
+          math.matrix(exp),
+          math.multiply(math.matrix(invC), math.matrix(N)),
+        ),
+      )
+      .toArray();
     // Create decayed inventory
     const decInv: Inventory[] = [];
     for (let i = 0; i < this.nuclideList.length; i += 1) {
       const inv = new Inventory(this.nuclideList[i].name);
-      inv.number = decay[i].valueOf() as number;
+      inv.number = (decay[i].valueOf() as number[])[0];
       if (inv.number !== 0) {
         decInv.push(inv);
       }

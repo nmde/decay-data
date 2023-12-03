@@ -16,6 +16,8 @@ export class OutputWriter {
 
   private inventory: Inventory[] = [];
 
+  private matrices: { label: string; contents: number[][] }[] = [];
+
   private nuclides: Record<string, Nuclide> = {};
 
   private output: Inventory[] = [];
@@ -45,6 +47,7 @@ export class OutputWriter {
     const nuclidesFile = path.join(outputDir, 'nuclides.json');
     const inventoryFile = path.join(outputDir, 'inventory.json');
     const outputFile = path.join(outputDir, 'output.json');
+    const matrixFile = path.join(outputDir, 'matrices.json');
     try {
       await fs.access(outputDir);
     } catch (err) {
@@ -59,6 +62,7 @@ export class OutputWriter {
     await this.writeJSON(nuclidesFile, this.nuclides);
     await this.writeJSON(inventoryFile, this.inventory);
     await this.writeJSON(outputFile, this.output);
+    await this.writeJSON(matrixFile, this.matrices);
     console.log(`Output written to ${outputDir}`);
   }
 
@@ -92,6 +96,15 @@ export class OutputWriter {
       file,
       await prettier.format(JSON.stringify(obj), { parser: 'json' }),
     );
+  }
+
+  /**
+   * Writes a matrix.
+   * @param label - The name/label of the matrix.
+   * @param contents - The matrix contents.
+   */
+  public writeMatrix(label: string, contents: number[][]) {
+    this.matrices.push({ label, contents });
   }
 
   /**

@@ -6,6 +6,9 @@
   "author": "nmde",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "yarn jest"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.8",
     "@types/node": "^20.9.0",

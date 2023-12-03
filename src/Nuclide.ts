@@ -33,6 +33,9 @@ export class Nuclide {
    * The decay constant in /s
    */
   public get lambda() {
+    if (this.stable) {
+      return 0;
+    }
     this._lambda = Math.LN2 / this.half_life;
     return Math.LN2 / this.half_life;
   }

@@ -6,6 +6,11 @@ import { Inventory } from '../src/Inventory';
 import OneNuclideExpected from './data/one_nuclide.json';
 import TwoNuclidesExpected from './data/two_nuclides.json';
 
+// TODO - test accuracy with data from ICRP-107
+
+// Verified - N, exp
+// Unverified - delta, C, invC
+
 const g = (i: Inventory[], n: string) =>
   i.find((x) => x.nuclide === n) as Inventory;
 const d = (a: number, b: number) => (Math.abs(a - b) / ((a + b) / 2)) * 100;
