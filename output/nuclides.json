@@ -52,7 +52,7 @@
     "gammas": { "1.836": 0.214 },
     "stable": false,
     "daughters": { "Sr-88": 1 },
-    "_lambda": 0.0006497442637419809
+    "_lambda": 0
   },
   "Sr-88": {
     "name": "Sr-88",
@@ -87,7 +87,7 @@
     },
     "stable": false,
     "daughters": { "Sr-89": 1 },
-    "_lambda": 0.0007625381524311829
+    "_lambda": 0
   },
   "Sr-89": {
     "name": "Sr-89",
@@ -119,7 +119,7 @@
     "gammas": {},
     "stable": false,
     "daughters": { "Sr-91": 1 },
-    "_lambda": 0.011909745370445795
+    "_lambda": 0
   },
   "Sr-91": {
     "name": "Sr-91",
@@ -135,7 +135,7 @@
     "gammas": { "0.5556": 0.95 },
     "stable": false,
     "daughters": { "Y-91": 1 },
-    "_lambda": 0.00023239696256955185
+    "_lambda": 0
   },
   "Y-91": {
     "name": "Y-91",
@@ -143,7 +143,7 @@
     "gammas": { "1.2048": 0.0026 },
     "stable": false,
     "daughters": { "Zr-91": 1 },
-    "_lambda": 1.3711394312145624e-7
+    "_lambda": 0
   },
   "Zr-91": {
     "name": "Zr-91",
@@ -167,7 +167,7 @@
     "gammas": {},
     "stable": false,
     "daughters": { "Sr-92": 1 },
-    "_lambda": 0.1543070304007002
+    "_lambda": 0
   },
   "Sr-92": {
     "name": "Sr-92",
@@ -189,7 +189,7 @@
     },
     "stable": false,
     "daughters": { "Zr-92": 1 },
-    "_lambda": 0.00005439008008160274
+    "_lambda": 0
   },
   "Zr-92": {
     "name": "Zr-92",
@@ -213,7 +213,7 @@
     "gammas": {},
     "stable": false,
     "daughters": { "Sr-93": 1 },
-    "_lambda": 0.1186895857123194
+    "_lambda": 0
   },
   "Sr-93": {
     "name": "Sr-93",
@@ -229,7 +229,7 @@
     "gammas": { "1.9178": 0.0154, "0.9471": 0.021, "0.2669": 0.073 },
     "stable": false,
     "daughters": {},
-    "_lambda": 0.00001891364277886775
+    "_lambda": 0
   },
   "Xe-133": {
     "name": "Xe-133",
@@ -285,7 +285,7 @@
     "gammas": { "0.6617": 0.9011 },
     "stable": false,
     "daughters": { "Ba-137": 1 },
-    "_lambda": 0.004526823279518974
+    "_lambda": 0
   },
   "Ba-137": {
     "name": "Ba-137",
@@ -361,7 +361,7 @@
     "gammas": { "0.1659": 0.24 },
     "stable": false,
     "daughters": { "La-139": 1 },
-    "_lambda": 0.0001390856370013535
+    "_lambda": 0
   },
   "La-139": {
     "name": "La-139",
@@ -393,7 +393,7 @@
     "gammas": { "0.5373": 0.2439 },
     "stable": false,
     "daughters": { "La-140": 1 },
-    "_lambda": 6.291198880204206e-7
+    "_lambda": 0
   },
   "La-140": {
     "name": "La-140",
@@ -407,7 +407,7 @@
     },
     "stable": false,
     "daughters": { "Ce-140": 1 },
-    "_lambda": 0.000004780726304771113
+    "_lambda": 0
   },
   "Ce-140": {
     "name": "Ce-140",
@@ -452,7 +452,7 @@
     },
     "stable": false,
     "daughters": { "La-141": 1 },
-    "_lambda": 0.0006323181723772535
+    "_lambda": 0
   },
   "La-141": {
     "name": "La-141",
@@ -460,7 +460,7 @@
     "gammas": { "1.3545": 0.0164 },
     "stable": false,
     "daughters": { "Ce-141": 1 },
-    "_lambda": 0.00004911757231859023
+    "_lambda": 0
   },
   "Ce-141": {
     "name": "Ce-141",
@@ -468,7 +468,7 @@
     "gammas": { "0.1454": 0.482 },
     "stable": false,
     "daughters": { "Pr-141": 1 },
-    "_lambda": 2.468169090584668e-7
+    "_lambda": 0
   },
   "Pr-141": {
     "name": "Pr-141",
@@ -500,7 +500,7 @@
     "gammas": { "1.2043": 0.142 },
     "stable": false,
     "daughters": { "La-142": 1 },
-    "_lambda": 0.0010898540574841907
+    "_lambda": 0
   },
   "La-142": {
     "name": "La-142",
@@ -529,7 +529,7 @@
     },
     "stable": false,
     "daughters": { "Ce-142": 1 },
-    "_lambda": 0.00012681068067324283
+    "_lambda": 0
   },
   "Ce-142": {
     "name": "Ce-142",
@@ -574,7 +574,7 @@
     "gammas": { "0.1639": 0.0195 },
     "stable": false,
     "daughters": { "Xe-131": 1 },
-    "_lambda": 6.775791226382097e-7
+    "_lambda": 0
   },
   "Xe-131": {
     "name": "Xe-131",
@@ -642,7 +642,7 @@
     "gammas": { "0.2332": 0.1 },
     "stable": false,
     "daughters": { "Xe-133": 1 },
-    "_lambda": 0.0000036632588182814627
+    "_lambda": 0
   },
   "I-133m": {
     "name": "I-133m",
@@ -773,7 +773,7 @@
     "gammas": {},
     "stable": false,
     "daughters": { "La-143": 1 },
-    "_lambda": 0.04847183080838778
+    "_lambda": 0
   },
   "La-143": {
     "name": "La-143",
@@ -787,7 +787,7 @@
     },
     "stable": false,
     "daughters": { "Ce-143": 1 },
-    "_lambda": 0.0008135530288262268
+    "_lambda": 0
   },
   "Ce-143": {
     "name": "Ce-143",
@@ -795,7 +795,7 @@
     "gammas": { "0.2933": 0.428, "0.7219": 0.0539 },
     "stable": false,
     "daughters": {},
-    "_lambda": 0.000005827684962888516
+    "_lambda": 0
   },
   "Cs-144": {
     "name": "Cs-144",
@@ -811,7 +811,7 @@
     "gammas": {},
     "stable": false,
     "daughters": { "La-144": 1 },
-    "_lambda": 0.06080238425964432
+    "_lambda": 0
   },
   "La-144": {
     "name": "La-144",
@@ -819,7 +819,7 @@
     "gammas": {},
     "stable": false,
     "daughters": { "Ce-144": 1 },
-    "_lambda": 0.017030643257001113
+    "_lambda": 0
   },
   "Ce-144": {
     "name": "Ce-144",
@@ -827,7 +827,7 @@
     "gammas": {},
     "stable": false,
     "daughters": { "Pr-144": 0.99, "Pr-144m": 0.00977 },
-    "_lambda": 2.8158144017536774e-8
+    "_lambda": 0
   },
   "Pr-144": {
     "name": "Pr-144",
@@ -835,7 +835,7 @@
     "gammas": { "0.6965": 0.0134, "2.1857": 0.0069 },
     "stable": false,
     "daughters": {},
-    "_lambda": 0.0006685447343363669
+    "_lambda": 0
   },
   "Pr-144m": {
     "name": "Pr-144m",
@@ -843,7 +843,7 @@
     "gammas": { "0.059": 0.0008, "1.8853": 0.0001 },
     "stable": false,
     "daughters": { "Pr-144": 0.999 },
-    "_lambda": 0.0016045073624072809
+    "_lambda": 0
   },
   "Sr-94": {
     "name": "Sr-94",
@@ -859,7 +859,7 @@
     "gammas": { "0.9187": 0.56 },
     "stable": false,
     "daughters": { "Zr-94": 1 },
-    "_lambda": 0.0006177782357931777
+    "_lambda": 0
   },
   "Zr-94": {
     "name": "Zr-94",
@@ -888,7 +888,7 @@
     },
     "stable": false,
     "daughters": { "Zr-95": 1 },
-    "_lambda": 0.001121597379546837
+    "_lambda": 0
   },
   "Zr-95": {
     "name": "Zr-95",
@@ -896,7 +896,7 @@
     "gammas": { "0.7242": 0.4417, "0.7567": 0.5546 },
     "stable": false,
     "daughters": { "Nb-95": 0.989, "Nb-95m": 0.0108 },
-    "_lambda": 1.2531297738263673e-7
+    "_lambda": 0
   },
   "Nb-95": {
     "name": "Nb-95",
@@ -904,7 +904,7 @@
     "gammas": { "0.7658": 0.9981 },
     "stable": false,
     "daughters": { "Mo-95": 1 },
-    "_lambda": 2.292742937337145e-7
+    "_lambda": 0
   },
   "Mo-95": {
     "name": "Mo-95",
@@ -920,7 +920,7 @@
     "gammas": { "0.2357": 0.249 },
     "stable": false,
     "daughters": { "Nb-95": 0.944, "Mo-95": 0.056 },
-    "_lambda": 0.0000022223093662150703
+    "_lambda": 0
   },
   "Sr-96": {
     "name": "Sr-96",
@@ -936,7 +936,7 @@
     "gammas": {},
     "stable": false,
     "daughters": { "Zr-96": 1 },
-    "_lambda": 0.1307824868981029
+    "_lambda": 0
   },
   "Zr-96": {
     "name": "Zr-96",
@@ -960,7 +960,7 @@
     "gammas": {},
     "stable": false,
     "daughters": { "Zr-97": 1 },
-    "_lambda": 0.18434765440424078
+    "_lambda": 0
   },
   "Zr-97": {
     "name": "Zr-97",
@@ -968,7 +968,7 @@
     "gammas": { "0.5076": 0.0503, "1.3624": 0.0102, "1.7502": 0.0109 },
     "stable": false,
     "daughters": { "Nb-97": 1 },
-    "_lambda": 0.00001149909719833216
+    "_lambda": 0
   },
   "Nb-97": {
     "name": "Nb-97",
@@ -976,7 +976,7 @@
     "gammas": { "0.6579": 0.9823 },
     "stable": false,
     "daughters": { "Mo-97": 1 },
-    "_lambda": 0.00016022819707811958
+    "_lambda": 0
   },
   "Mo-97": {
     "name": "Mo-97",

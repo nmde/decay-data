@@ -1,6 +1,6 @@
 Reading nuclides from C:\Users\dmnev\Documents\nmde\decay\nuclides.csv
-Reading inventory from C:\Users\dmnev\Documents\nmde\decay\tests\data\two_nuclides.csv
-Decaying 3600 seconds
+Reading inventory from C:\Users\dmnev\Documents\nmde\decay\inventory.csv
+Decaying 1000 seconds
 Adding new nuclide: Kr-85
 Adding daughter: Kr-85 -> Rb-85 (1)
 Adding new nuclide: Rb-85
@@ -247,12 +247,3 @@ Adding daughter: Zr-98 -> Nb-98 (1)
 Adding new nuclide: Nb-98
 Adding daughter: Nb-98 -> Mo-98 (1)
 Adding new nuclide: Mo-98
-Constructing Lambda matrix
-
-Constructing C matrix
-
-Constructing inverse C matrix
-
-Calculating matrix exponential
-
-Calculating number matrix

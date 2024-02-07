@@ -37,6 +37,6 @@ export class Nuclide {
       return 0;
     }
     this._lambda = Math.LN2 / this.half_life;
-    return Math.LN2 / this.half_life;
+    return this._lambda;
   }
 }

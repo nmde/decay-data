@@ -4,13 +4,11 @@ import { Nuclide } from './Nuclide';
  * Represents the inventory of a nuclide.
  */
 export class Inventory {
-  public number = 0;
-
   /**
    * Constructs Inventory.
    * @param nuclide - The corresponding nuclide.
    */
-  public constructor(public nuclide: string) {}
+  public constructor(public nuclide: string, public number = 0) {}
 
   /**
    * Sets the number density from Bq.

@@ -63,6 +63,34 @@ export class OutputWriter {
     await this.writeJSON(inventoryFile, this.inventory);
     await this.writeJSON(outputFile, this.output);
     await this.writeJSON(matrixFile, this.matrices);
+    let table = '\\begin{longtable}{|l|l|l|l|}\n\t\\caption{Isotope Decay Data}\n\t\\\\\\hline\n\t\t\\bf Nuclide & \\bf Half-Life (s) & \\bf Gamma Energies & \\bf Decay Products \\\\\\hline\n\t\t';
+    Object.values(this.nuclides).forEach((nuclide) => {
+      let gamma_energies = '';
+      const gammas = Object.entries(nuclide.gammas);
+      if (gammas.length > 0) {
+        gamma_energies = '\\begin{tabular}{c|c}';
+        gammas.forEach(([energy, percent]) => {
+          gamma_energies += `\n\t\t\t${energy} & ${percent} \\\\`;
+        });
+        gamma_energies += '\n\t\t\\end{tabular}';
+      }
+      let decay_products = '';
+      const products = Object.entries(nuclide.daughters);
+      if (products.length > 0) {
+        decay_products = '\\begin{tabular}{c|c}';
+        products.forEach(([daughter, bf]) => {
+          decay_products += `\n\t\t\t${daughter} & ${(bf * 100).toFixed(2)}\\% \\\\`;
+        });
+        decay_products += '\n\t\t\\end{tabular}';
+      }
+      let half_life = `${nuclide.half_life.toPrecision(4)}`;
+      if (nuclide.stable) {
+        half_life = 'Stable';
+      }
+      table += `${nuclide.name} & ${half_life} & ${gamma_energies} & ${decay_products} \\\\\\hline\n\t\t`;
+    });
+    table += `\\label{tab:isotope-decay-data}\n\\end{longtable}`;
+    await fs.writeFile(path.join(outputDir, 'nuclides.tex'), table);
     console.log(`Output written to ${outputDir}`);
   }
 
